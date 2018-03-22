@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ag-grid.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Saját CSS     -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Datapicker CSS -->
+    <link rel="stylesheet" href="datepicker/bootstrap-datepicker.css">
+
+    <title>Sajtrendelés</title>
+</head>
+
+<body>
+    <!-- Tároló container -->
+    <div id="container_div" class="container-fluid">
+
+        <div class="form-row align-items-center mt-3 text-center" style="margin-left:2px">
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Rendelés</button> -->
+            <h1 class="ml-3 text-center">Sajtrendelés</h1>
+        </div>
+
+        <h2 class="text-center font-weight-bold text-capitalize">Árlista</h2>
+
+        <div id="myGrid" style="width:100%;" class="ag-theme-blue mt-4"></div>
+
+        <!-- MODAL -->
+        <div id="variation" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sajtrendelés</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Szerződés adatai -->
+                        <form id="contract_form">
+                            <div class="btn-div mb-5 d-flex">
+                                <button type="button" id="cheese_save" class="btn btn-primary" data-dismiss="modal">Mentés</button>
+                                <button type="button" class="btn btn-secondary ml-3" data-dismiss="modal">Mégsem</button>
+                                <button type="button" class="btn btn-primary contr-data-plus ml-auto mr-5">Új sajt hozzáadása a rendeléshez</button>
+                            </div>
+
+                            <!-- Selection: -->
+                            <h3 id="selectedRows" class="mb-5 text-center"></h3>
+
+                            <div id="cheeses"></div>
+                        </form>
+                        <!-- Szerződés adatai -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL -->
+
+    </div>
+    <!-- Tároló container -->
+    <script src="js/jquery.serializejson.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

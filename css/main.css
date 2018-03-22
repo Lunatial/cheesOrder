@@ -1,0 +1,16 @@
+/* #btn-div{
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+} */
+
+/* .nav-item:hover {
+    box-shadow: 5px -3px 8px #888888;
+} */
+
+.mt-4 {
+   margin-top: 30px !important;
+}
+
+.modal-lg{
+    max-width: 1200px;
+}
